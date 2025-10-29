@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Rápidas</title>
+    <script type="text/javascript" src="js/notasrapidas.js"></script>
+    <link rel="stylesheet" href="css/notasrapidas.css">
+</head>
+<body>
+    <h1>Notas Rápidas</h1>
+
+    <input type="text" id="nota" placeholder="Escreva sua nota aqui"> <!-- Campo para escrever nota -->
+
+    <input type="button" id="btnadicionar" value="adicionar" onclick="adicionar()"> <!-- Botão para adicionar nota -->
+   
+    <br>
+    <br>
+    <label for="urgente" >Urgente</label>
+    <!-- botão urgente -->
+    <input type="checkbox" id="urgente">
+
+    <br>
+
+    <label for="naourgente">Não Urgente</label>
+    <!-- botão não urgente -->
+    <input type="checkbox" id="naourgente">
+
+    <p id="urg">Notas URGENTES</p>
+    <ul id="NU"> 
+        <!-- NOTAS URGENTES -->
+         
+
+    </ul>
+
+    <p id="nurg">Notas NÃO URGENTES</p>
+    <ul id="NNU">
+        <!-- NOTAS NÃO URGENTES -->
+         
+    </ul>
+
+    <input type="button" id="btnremovertexto" value="Remover Texto" onclick="removertexto()">
+    <input type="button" id="btnremovertudo" value="Remover Tudo" onclick="removertudo()">
+</body>
+</html>
