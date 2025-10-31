@@ -123,6 +123,7 @@ li {
     font-family: "Parkinsans", sans-serif;
     font-size: 30px;
     cursor: pointer;
+    line-height: 1.5;
 }
 
 button{
@@ -151,7 +152,7 @@ button:hover {
     cursor: pointer;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* ---------------- RESPONSIVIDADE ---------------- */
 
 @media (max-width: 768px) {
     h1 {
