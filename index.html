@@ -1,45 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notas Rápidas</title>
     <script type="text/javascript" src="js/notasrapidas.js"></script>
-    <link rel="stylesheet" href="css/notasrapidas.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/notasrapidas.css" />
+  </head>
+  <body>
     <h1>Notas Rápidas</h1>
+    <div id="container01">
+      <input type="text" id="nota" placeholder="Escreva sua nota aqui" />
+      <!-- Campo para escrever nota -->
+      <input type="checkbox" id="urgente" />
+      <label for="urgente" id="urgLabel">Urgente</label>
+      <!-- botão urgente -->
 
-    <input type="text" id="nota" placeholder="Escreva sua nota aqui"> <!-- Campo para escrever nota -->
+      <br />
+      <input type="checkbox" id="naourgente" />
+      <label for="naourgente" id="nurgLabel">Não Urgente</label>
+      <!-- botão não urgente -->
 
-    <input type="button" id="btnadicionar" value="adicionar" onclick="adicionar()"> <!-- Botão para adicionar nota -->
-   
-    <br>
-    <br>
-    <label for="urgente" >Urgente</label>
-    <!-- botão urgente -->
-    <input type="checkbox" id="urgente">
+      <input
+        type="button"
+        id="btnadicionar"
+        value="adicionar"
+        onclick="adicionar()"
+      />
+      <!-- Botão para adicionar nota -->
+    </div>
 
-    <br>
+    <br />
+    <br />
 
-    <label for="naourgente">Não Urgente</label>
-    <!-- botão não urgente -->
-    <input type="checkbox" id="naourgente">
-
-    <p id="urg">Notas URGENTES</p>
-    <ul id="NU"> 
+    <div id="container02">
+      <div id="NU">
         <!-- NOTAS URGENTES -->
-         
+        <div id="txt01">
+          <h2 id="urg">Notas URGENTES</h2>
+        </div>
 
-    </ul>
+        <div id="espacoNU">
+          <ul></ul>
+        </div>
+      </div>
 
-    <p id="nurg">Notas NÃO URGENTES</p>
-    <ul id="NNU">
+      <div id="NNU">
         <!-- NOTAS NÃO URGENTES -->
-         
-    </ul>
+        <div id="txt02">
+          <h2 id="nurg">Notas NÃO URGENTES</h2>
+        </div>
 
-    <input type="button" id="btnremovertexto" value="Remover Texto" onclick="removertexto()">
-    <input type="button" id="btnremovertudo" value="Remover Tudo" onclick="removertudo()">
-</body>
+        <div id="espacoNNU">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+    <input
+      type="button"
+      id="btnremovertexto"
+      value="Remover Texto"
+      onclick="removertexto()"
+    />
+    <input
+      type="button"
+      id="btnremovertudo"
+      value="Remover Tudo"
+      onclick="removertudo()"
+    />
+  </body>
 </html>
