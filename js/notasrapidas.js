@@ -7,7 +7,7 @@ function adicionar(){ /*adicionar nota */
     var espacoNNU = document.getElementById("espacoNNU")
 
     /*verificações---------------------------*/
-    if(n==""){
+    if(n=="" || n==null){
         alert("O campo não pode ficar vazio!")
         return;
     }
