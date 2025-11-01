@@ -1,6 +1,6 @@
 function adicionar(){ /*adicionar nota */
 
-    var n = document.getElementById("nota").value /*.value pega o valor inserido */
+    var n = document.getElementById("nota").value.trim() /*.value pega o valor inserido */
     var urgente = document.getElementById("urgente")
     var naourgente = document.getElementById("naourgente")
     var espacoNU = document.getElementById("espacoNU")
