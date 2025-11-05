@@ -1,11 +1,12 @@
-function adicionar(){ /*adicionar nota */
+function adicionar(){ /*adiciona nota */
 
     var n = document.getElementById("nota").value.trim() /*.value pega o valor inserido */
     var urgente = document.getElementById("urgente")
     var naourgente = document.getElementById("naourgente")
     var espacoNU = document.getElementById("espacoNU")
     var espacoNNU = document.getElementById("espacoNNU")
-
+
+
     /*verificações---------------------------*/
     if(n=="" || n==null){
         alert("O campo não pode ficar vazio!")
@@ -23,37 +24,33 @@ function adicionar(){ /*adicionar nota */
     }
     /*---------------------------------------- */
 
-if(urgente.checked==true && naourgente.checked==false){
+ /*adiciona na lista correspondente sem substituir valor*/ 
+    if(urgente.checked==true && naourgente.checked==false){
         var li = document.createElement("li");
         li.textContent = n; /*conteúdo da li será a próxima nota do usuário */
         li.style.color="#ffffff" /*Visivelmente agradável no campo vermelho */
+        espacoNU.appendChild(li);
     }
 
     if(naourgente.checked==true && urgente.checked==false){
         var li = document.createElement("li");
         li.textContent = n;
-    }    
-    /*adiciona na lista correspondente sem substituir valor*/
-    if (urgente.checked===true) {
-        espacoNU.appendChild(li);
-    }
-    else if (naourgente.checked===true) {
-        espacoNNU.appendChild(li);
-    }
+        espacoNNU.appendChild(li);/*appendChild cria um elemento filho no elemento pai */
+    }  
 
     /*Limpa o campo e desmarca os checkboxes*/
     document.getElementById("nota").value = "";
     urgente.checked = false;
     naourgente.checked = false;
 
-    /*riscar nota ao clicar*/
+    /*risca nota ao clicar*/
     li.onclick = function(){
         li.classList.toggle("riscado") /*comandos no css */
     }
-}  /*fim da função adicionar() */
+}  /*---------------------------fim da função adicionar()------------------------------- */
 
 
 function apagarTodas(listaNotas) {
-    var lista = document.getElementById(listaNotas);
-    lista.innerHTML = "";
+    var lista = document.getElementById(listaNotas); /*listaNotas guarda o espaçoNU ou espaçoNNU */
+    lista.innerHTML = ""; /*apaga todo o conteúdo do espacoNU ou espacoNNU */
 }
