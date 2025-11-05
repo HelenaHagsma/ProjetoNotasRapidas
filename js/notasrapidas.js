@@ -1,6 +1,6 @@
 function adicionar(){ /*adiciona nota */
 
-    var n = document.getElementById("nota").value.trim() /*.value pega o valor inserido */
+    var n = document.getElementById("nota").value.trim() /*.value pega o valor inserido e .trim pega o valor sem espaços em branco */
     var urgente = document.getElementById("urgente")
     var naourgente = document.getElementById("naourgente")
     var espacoNU = document.getElementById("espacoNU")
@@ -35,7 +35,7 @@ function adicionar(){ /*adiciona nota */
     if(naourgente.checked==true && urgente.checked==false){
         var li = document.createElement("li");
         li.textContent = n;
-        espacoNNU.appendChild(li);/*appendChild cria um elemento filho no elemento pai */
+        espacoNNU.appendChild(li);/*appendChild cria um elemento filho(li) no elemento pai(espacoNNU) */
     }  
 
     /*Limpa o campo e desmarca os checkboxes*/
@@ -51,6 +51,6 @@ function adicionar(){ /*adiciona nota */
 
 
 function apagarTodas(listaNotas) {
-    var lista = document.getElementById(listaNotas); /*listaNotas guarda o espaçoNU ou espaçoNNU */
+    var lista = document.getElementById(listaNotas); /*listaNotas guarda o espaçoNU ou espaçoNNU, dependendo de qual o usuário clicar */
     lista.innerHTML = ""; /*apaga todo o conteúdo do espacoNU ou espacoNNU */
 }

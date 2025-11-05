@@ -9,33 +9,31 @@
   </head>
   <body>
     <h1>Notas Rápidas</h1>
+
     <div id="container01">
-      <input type="text" id="nota" placeholder="Escreva sua nota aqui" />
-      <!-- Campo para escrever nota -->
-      <input type="checkbox" id="urgente" />
-      <label for="urgente" id="urgLabel">Urgente</label>
-      <!-- botão urgente -->
+      <input type="text" id="nota" placeholder="Escreva sua nota aqui" /> <!-- Campo para escrever nota -->
+      <input type="checkbox" id="urgente" /> <!-- checkbox urgente -->
+      <label for="urgente" id="urgLabel">Urgente</label> 
 
       <br />
-      <input type="checkbox" id="naourgente" />
+      <input type="checkbox" id="naourgente" /><!-- checkbox não urgente -->
       <label for="naourgente" id="nurgLabel">Não Urgente</label>
-      <!-- botão não urgente -->
 
+       <!-- Botão para adicionar nota -->
       <input
         type="button"
         id="btnadicionar"
         value="adicionar"
         onclick="adicionar()"
       />
-      <!-- Botão para adicionar nota -->
-    </div>
+     
+    </div> <!----------------------fim container 01-------------------------->
 
     <br />
     <br />
 
     <div id="container02">
-      <div id="NU">
-        <!-- NOTAS URGENTES -->
+      <div id="NU"> <!-- NOTAS URGENTES -->
         <div id="txt01">
           <h2 id="urg">Notas URGENTES</h2>
         </div>
@@ -44,12 +42,11 @@
           <ul></ul>
         </div>
         <button onclick="apagarTodas('espacoNU')">Apagar Todas</button> <!--espacoNU é enviado para a funcao apagarTodas como argumento-->
-        
+
         <!-- botão para apagar todas as notas urgentes -->
       </div>
 
-      <div id="NNU">
-        <!-- NOTAS NÃO URGENTES -->
+      <div id="NNU"> <!-- NOTAS NÃO URGENTES -->
         <div id="txt02">
           <h2 id="nurg">Notas NÃO URGENTES</h2>
         </div>
@@ -60,6 +57,6 @@
         <button onclick="apagarTodas('espacoNNU')">Apagar Todas</button> 
         <!-- botão para apagar todas as notas não urgentes-->
       </div>
-    </div>
+    </div> <!----------------------fim container 02--------------------------->
   </body>
 </html>
