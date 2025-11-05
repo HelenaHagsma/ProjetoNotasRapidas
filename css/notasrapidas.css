@@ -5,8 +5,7 @@ body {
     padding: 0;
     text-align: center;
     font-family: "Parkinsans", sans-serif;
-   background: #EEAECA;
-   background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background-color: #D8BFD8;
 }
 
 h1 {
@@ -212,3 +211,4 @@ button:hover {
         width: 95%;
     }
 }
+
